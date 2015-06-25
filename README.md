@@ -1,4 +1,4 @@
-r-novice-inflammation
+r-intro-bioinformatics
 =====================
 
 Introduction to R for bioinformatics.
