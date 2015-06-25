@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <title>Software Carpentry: Test Lesson</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="lesson">
+    <div class="container card">
+      <div class="banner">
+        <a href="http://software-carpentry.org" title="Software Carpentry">
+          <img alt="Software Carpentry banner" src="img/software-carpentry-banner.png" />
+        </a>
+      </div>
+      <article>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+                    <a href="index.html"><h1 class="title">Test Lesson</h1></a>
+          <h2 class="subtitle">This is a test by Steve A.</h2>
+          <section class="objectives panel panel-warning">
+<div class="panel-heading">
+<h2><span class="glyphicon glyphicon-certificate"></span>Learning Objectives</h2>
+</div>
+<div class="panel-body">
+<ul>
+<li>Lalala</li>
+<li>Bla bla bla</li>
+<li>Etc etc</li>
+</ul>
+</div>
+</section>
+<p>Hi there, this is a test file. <code>And here is some inline code!</code> yay.</p>
+<p><em>This is some executed R code..</em></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="st">&quot;This is some printed text&quot;</span>)</code></pre>
+<pre><code>## [1] &quot;This is some printed text&quot;</code></pre>
+<h3 id="heres-how-you-get-r-lesson-generation-working">Here’s how you get R lesson generation working:</h3>
+<p><em>Eg. How to make <a href="https://raw.githubusercontent.com/steveandroulakis/r-novice-inflammation/gh-pages/99-test-lesson.Rmd">this Rmd file</a> generate the html page you’re reading.</em></p>
+<ol style="list-style-type: decimal">
+<li>git clone the lesson on your machine <code>git clone https://github.com/swcarpentry/r-novice-inflammation</code></li>
+<li>Write your Rmd page (like the file that generated this.. <a href="99-test-lesson.Rmd">99-test-lesson.Rmd</a>!). <em>Note: Your <code>Rmd</code> file must start with a number and dash, like the other ones currently in the directory. Eg <code>55-my-test.Rmd</code>.</em></li>
+<li>Install gcc, R and pandoc (use <code>brew</code> on the Mac)</li>
+<li>Install pandocfilters and commonmark (it’s python, use <code>pip</code>)</li>
+<li>Install knitr in R (eg <code>install.packages('knitr', dependencies = TRUE)</code>)</li>
+<li><code>make preview</code> to generate the relevant markdown, html files for your lessons.</li>
+<li>You’ll end up with an html page like this one!</li>
+<li>Your output should resemble the following:</li>
+</ol>
+<pre><code>$ make preview
+Rscript -e &quot;knitr::knit(&#39;$(basename 99-test-lesson.Rmd)&#39;, output = &#39;$(basename 99-test-lesson.md)&#39;)&quot;
+
+
+processing file: 99-test-lesson.Rmd
+|......................                                           |  33%
+ordinary text without R code
+
+|...........................................                      |  67%
+label: steve-test-code
+|.................................................................| 100%
+ordinary text without R code
+
+
+output file: 99-test-lesson.md
+
+[1] &quot;99-test-lesson.md&quot;
+pandoc -s -t html \
+--smart \
+--template=_layouts/page \
+--filter=tools/filters/blockquote2div.py \
+--filter=tools/filters/id4glossary.py \
+-Vheader=&quot;$(cat _includes/header.html)&quot; -Vbanner=&quot;$(cat _includes/banner.html)&quot; -Vfooter=&quot;$(cat _includes/footer.html)&quot; -Vjavascript=&quot;$(cat _includes/javascript.html)&quot; \
+-o 99-test-lesson.html 99-test-lesson.md</code></pre>
+<h3 id="and-now-for-a-kitten">And now, for a kitten…</h3>
+<p><img src="fig/kitten.png" alt="A Kitten" /></p>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2><span class="glyphicon glyphicon-pencil"></span>Challenge - Doing things.</h2>
+</div>
+<div class="panel-body">
+<p>Do all of the things!</p>
+</div>
+</section>
+<aside class="callout panel panel-info">
+<div class="panel-heading">
+<h2><span class="glyphicon glyphicon-pushpin"></span>Key Points</h2>
+</div>
+<div class="panel-body">
+<ul>
+<li>Test point 1</li>
+<li>Test point 2</li>
+</ul>
+</div>
+</aside>
+        </div>
+      </div>
+      </article>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://software-carpentry.org">Software Carpentry</a>
+        <a class="label swc-blue-bg" href="https://github.com/swcarpentry/r-novice-inflammation">Source</a>
+        <a class="label swc-blue-bg" href="mailto:admin@software-carpentry.org">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      </div>
+    </div>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
+  </body>
+</html>

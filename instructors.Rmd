@@ -1,0 +1,14 @@
+---
+layout: page
+title: Programming with R for Bioinformatics
+subtitle: Instructor's Guide
+minutes: 0
+---
+
+```{r, include = FALSE}
+source("tools/chunk-options.R")
+```
+
+## Todo
+
+Put content here!
