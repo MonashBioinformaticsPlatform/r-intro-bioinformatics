@@ -26,7 +26,7 @@ print("This is some printed text")
 ### Here's how you get R lesson generation working:
 _Eg. How to make [this Rmd file](https://raw.githubusercontent.com/steveandroulakis/r-novice-inflammation/gh-pages/99-test-lesson.Rmd) generate the html page you're reading._
 
-1. git clone the lesson on your machine `git clone https://github.com/swcarpentry/r-novice-inflammation`
+1. git clone the lesson on your machine `git clone https://github.com/MonashBioinformaticsPlatform/r-intro-bioinformatics`
 2. Write your Rmd page (like the file that generated this.. [99-test-lesson.Rmd](99-test-lesson.Rmd)!). *Note: Your `Rmd` file must start with a number and dash, like the other ones currently in the directory. Eg `55-my-test.Rmd`.*
 3. Install gcc, R and pandoc (use `brew` on the Mac)
 4. Install pandocfilters and commonmark (it's python, use `pip`)
